@@ -1,0 +1,11 @@
+0] Introduction
+1] What is language?
+2] source code > byte code (compile) > binary code
+3] IDE
+4] What is software?
+5] Types of software    
+    - System 
+    - Application 
+        - mobile
+        - desktop
+        - web

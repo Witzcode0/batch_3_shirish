@@ -1,0 +1,11 @@
+What is varaible in c?
+
+A variable in C is a named storage location in memory used to hold data that can be modified during program execution.
+
+A variable in C is a named memory location used to store a value that can be changed during the execution of a program. Each variable must be declared with a specific data type, which determines the size and type of data it can hold (such as int, float, char, etc.).
+
+syntax:
+data_type varaible_name = value;
+
+int age = 29;
+float weight = 67.89;

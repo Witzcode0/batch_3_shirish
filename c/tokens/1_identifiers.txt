@@ -1,0 +1,52 @@
+What is an identifiers in c?
+
+An identifier in C is the name used to uniquely identify variables, functions, arrays, structures, and other user-defined elements in a C program.
+
+It is a user-defined name that helps the compiler recognize and differentiate elements during compilation.
+
+Rules of identifiers:
+
+1] Identifier must be unique 
+- num1
+- num2
+2] Can Contain [a-z, A-Z, 0-9, _]
+- Level_2
+3] Must Begin with a Letter (A–Z or a–z) or an Underscore (_). you can not start with the digits.
+4] No Special Characters[!, @, #, $ ,%, ^ , &, * ] or Spaces Allowed [ ]
+- first name - False
+- first_name - True
+5] Cannot Be a Keyword or Reserved Word as identifier
+6] Case-Sensitive first_name, Frist_Name, fristname, Firstname
+7] Length Limit (Implementation Dependent)
+ANSI C: At least the first 31 characters are significant for external identifiers.
+Most modern compilers support longer names, but best to keep them meaningful and concise.
+
+
+Examples of Valid Identifiers:
+first_name
+level_1
+numbers_of_pen
+
+Examples of Invalid Identifiers:
+| Identifier  | Reason                        |
+| ----------- | ----------------------------- |
+| `123value`  | Starts with a digit           |
+| `float`     | Reserved keyword              |
+| `user-name` | Hyphen not allowed            |
+| `total$`    | Special character not allowed |
+
+
+Identifiers Case
+
+snack_case:
+----------
+first_name
+numbers_of_pen
+
+camelCase:
+firstName
+numbersOfPen
+
+PascalCase:
+FirstName
+NumbersOfPen
