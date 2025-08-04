@@ -1,0 +1,60 @@
+
+What are the datatypes?
+
+
+Data types in C define the type and size of data that can be stored in a variable. They specify the kind of value a variable can hold and the operations that can be performed on it. For example, int for integers, float for floating-point numbers, and char for characters.
+
+Basic Datatypes:
+https://witzcode.pythonanywhere.com/technology/2/3/?wz_tech=C%20programming&wz_category=datatype
+Data types in C define the type and size of data that can be stored in a variable. They specify the kind of value a variable can hold and the operations that can be performed on it. For example, int for integers, float for floating-point numbers, and char for characters.:
+| Data Type | Size (in bytes) | Description                     | Format Specifier | Example
+| --------- | --------------- | ------------------------------- | ---------------- |---------
+| `int`     | 2 or 4          | Integer (whole numbers)         | `%d` or `%i`     | 10, 100, 50, 39
+| `float`   | 4               | Single-precision floating-point | `%f`             | 10.0, 12.56, 100.78
+| `double`  | 8               | Double-precision floating-point | `%lf`            | 1000.0, 
+| `char`    | 1               | Character (stores ASCII values) | `%c`             | 'a', 'D', 'z'
+| `void`    | 0               | No value (used for functions)   | —                |
+
+int num1 = 10;
+
+---------------------------------------------------------------------
+void Type in C
+In C, the void type is a special data type that represents "nothing" or "no value." It is mainly used in three contexts:
+
+
+#include<stdio.h>
+
+//int main(){
+  //  return 0;
+//}
+
+void main(){
+
+}
+
+---------------------------------------------------------------------
+Types of Derived Data Types
+| Derived Type             | Description                                                 | Example Syntax              |
+| ------------------------ | ----------------------------------------------------------- | --------------------------- |
+| **Array**                | Collection of elements of the same type                     | `int arr[5];`               |
+| **Pointer**              | Stores the address of another variable                      | `int *ptr;`                 |
+| **Function**             | Represents code block with parameters and return type       | `int sum(int a, int b);`    |
+| **Structure (`struct`)** | Collection of variables of different types grouped together | `struct Student { ... };`   |
+| **Union**                | Similar to struct, but memory is shared between members     | `union Data { ... };`       |
+| **Enumeration (`enum`)** | User-defined type with named integer constants              | `enum Color { RED, BLUE };` |
+
+int students_id[] = {
+    1,2,3,4,5,6,7,8,9,10
+} 
+--------------------------
+The enum keyword in C is used to define a user-defined data type that consists of a set of named integer constants. It makes code more readable and manageable, especially when dealing with fixed sets of related values (like days, states, directions, etc.).
+
+syntax:
+enum variable {
+    value1, value2, value3
+}
+
+Example : enum Weekday { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };
+
+---------------------------------------------------------------------
+
