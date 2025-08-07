@@ -1,0 +1,46 @@
+// a constant is a fixed value that does not change during the execution of the program. Constants are used to define values that remain the same throughout the code, improving readability and maintainability.
+
+-------------------------------------------
+with error
+#include<stdio.h>
+
+#define PI 3.14;
+
+void main(){
+    // int min_num = 10;
+    // const int max_num = 30;
+    // max_num = 40;
+    // min_num = 20;
+    // printf("Max: %d\n", max_num);
+    // printf("Min: %d\n", min_num);
+    // printf("PI: %f", PI);
+
+    float r = 10.0;
+    float area = PI * r * r;
+    printf("Area of circle : %f", area);
+    
+}
+
+
+--------------------------------------
+
+without error:
+#include <stdio.h>
+
+// Define PI as a macro
+#define PI 3.14
+
+void main() {
+    int min_num = 10;
+    const int max_num = 30;
+
+    // Modify min_num (allowed), max_num is constant (not allowed to change)
+    min_num = 20;
+
+    // Declare 'r' before using it
+    float r = 10.0;
+    float area = PI * r * r;
+
+    // Print the result
+    printf("Area of circle : %f\n", area);
+}
