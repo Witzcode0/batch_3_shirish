@@ -1,0 +1,68 @@
+What is the purpose of storage classes in c?
+
+Storage classes in C define the scope (visibility), lifetime, and storage location of variables and functions. They determine how and where the data is stored, how long it stays in memory, and who can access it.
+
+What are the four main storage classes in c?
+
+The four main storage classes in C are:
+
+1] auto
+2] register
+3] static
+4] extern
+
+1] What is the auto storage class in c, and when is it used?
+
+The auto storage class is the default storage class for local variables in C. It means that the variable is automatically stored in memory. Local variables declared inside a function or block are auto by default and do not need the auto keyword explicitly.
+
+Example : 
+void exampleFunction() {
+    auto int localVar = 5;  // 'auto' keyword is optional here
+    printf("Auto variable: %d\n", localVar);
+}
+
+2] What is the register storage class, and how does it differ from auto?
+
+The register storage class suggests that the variable be stored in a CPU register instead of RAM to optimize access speed. It is typically used for variables that are heavily accessed, such as loop counters. Unlike auto, you cannot take the address of a register variable.
+
+Example :
+void exampleFunction() {
+    register int counter = 0;  // Suggests storing counter in a CPU register
+    for (counter = 0; counter < 10; counter++) {
+        printf("%d ", counter);
+    }
+}
+
+
+3] What is the static storage class, and what are its uses?
+
+
+The static storage class in C has different effects depending on whether it is used for local or global variables:
+
+• Local Variables: A local variable declared with static retains its value between function calls.
+• Global Variables/Functions: A global variable or function declared with static has file scope, meaning it is only accessible within the file it is declared in.
+
+Example :
+// Example for local static variable
+void exampleFunction() {
+    static int counter = 0;  // Retains value between function calls
+    counter++;
+    printf("Static counter: %d\n", counter);
+}
+
+// Example for global static variable
+static int globalVar = 10;  // Accessible only within this file
+
+What is the extern storage class, and how is it used?
+
+4] The extern storage class is used to declare a global variable or function that is defined in another file or to extend the visibility of a global variable or function across multiple files. It tells the compiler that the variable or function is defined elsewhere.
+
+Example :
+// File1.c
+int globalVar = 100;  // Definition of globalVar
+
+// File2.c
+extern int globalVar;  // Declaration of globalVar defined in another file
+void exampleFunction() {
+    printf("Extern global variable: %d\n", globalVar);
+}
