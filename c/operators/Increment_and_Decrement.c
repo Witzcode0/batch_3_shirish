@@ -6,7 +6,7 @@ void main(){
     printf("num++ : %d\n", increment_num); // 11
     printf("++num : %d\n", ++num); // 12
 
-    int decrement_num = num--; // 10
+    int decrement_num = num--; // 12
     printf("num-- : %d\n", decrement_num); // 11
-    printf("--num : %d\n", --num); // 12
+    printf("--num : %d\n", --num); // 10
 }
