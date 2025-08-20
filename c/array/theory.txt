@@ -1,0 +1,35 @@
+What is an array in c?
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. 
+
+syntax: 
+
+single dim:
+data_type variable_name[size]; // declare
+
+data_type variable_name[size] = { value1, value2,....valuen}; // initialize
+
+Example :
+
+int stu_mark[5];
+int stu_mark[5] = {67, 87, 98, 96, 58};
+
+
+multi dim:
+data_type variable_name[row][col];
+
+data_type variable_name[row][col] = {
+    {value1, value2,....valuen},
+    {value1, value2,....valuen}
+    ...
+    {value1, value2,....valuen}
+}
+
+Example: 
+
+int matrix[2][3];
+
+int matrix[2][3] = {
+    {1,2,3},
+    {11,22,33}
+};
+
