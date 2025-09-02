@@ -1,0 +1,13 @@
+In C programming, a string is a sequence of characters stored in contiguous memory locations and treated as a single unit. 
+
+Unlike some other programming languages that have a dedicated "string" data type, C represents strings as arrays of characters.
+
+A crucial characteristic of C strings is that they are null-terminated. This means that every C string ends with a special character, the null character (\0), which signifies the end of the string. This null terminator is essential for functions that operate on strings, as it allows them to determine where the string ends.
+
+\0 = null
+
+"BIT"
+
+synatx :
+
+char name[size] = "baroda institute of technology";

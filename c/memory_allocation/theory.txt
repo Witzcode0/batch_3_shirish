@@ -1,0 +1,108 @@
+add 5
+
+[_, _, _, _, _, _, _, _, _, _,] # here weast 5 node
+
+add 12
+
+[_, _, _, _, _, _, _, _, _, _,] # need 2 extra node
+
+Dynamic Memory:
+
+malloc
+calloc
+free
+realloc
+-------------------------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+    int *p =  (int *)malloc(100); //initialization
+    int total = 2;
+
+    for (int i = 0; i < total; i++){
+
+        int num;
+        printf("Enter a num-%d: ", i+1);
+        scanf("%d", &num);
+
+        p[i] = num;
+
+    }
+
+    for (int i = 0; i < total; i++){
+        printf("%d\n", p[i]);
+    }
+
+}
+-------------------------------------------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+    int *p =  (int *)calloc(5, 20); //initialization
+    int total = 2;
+
+    for (int i = 0; i < total; i++){
+
+        int num;
+        printf("Enter a num-%d: ", i+1);
+        scanf("%d", &num);
+
+        p[i] = num;
+
+    }
+
+    for (int i = 0; i < total; i++){
+        printf("%d\n", p[i]);
+    }
+
+}
+
+-----------------------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+    int *p =  (int *)calloc(5, 20); //initialization
+    int total = 2;
+
+    for (int i = 0; i < total; i++){
+
+        int num;
+        printf("Enter a num-%d: ", i+1);
+        scanf("%d", &num);
+
+        p[i] = num;
+
+    }
+
+    for (int i = 0; i < total; i++){
+        printf("%d\n", p[i]);
+    }
+    
+    free(p);
+
+}
+
+----------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr = (int *)malloc(20);
+
+    // Resize the memory block to hold 100size
+    ptr = (int *)realloc(ptr, 100);
+    
+    // Check for allocation failure
+    if (ptr == NULL) {
+        printf("Memory Reallocation Failed");
+        exit(0);
+    }else{
+        printf("Yes: memeory is updated");
+    }
+
+    return 0;
+}
