@@ -1,0 +1,50 @@
+In C, a structure (struct) allows you to group variables of different data types into a single unit. with each member having its own unique memory location, resulting in a total size equal to the sum of all members' sizes.
+
+ In contrast, a union also groups different data types, but all members share the same memory location, so the total size of the union is only the size of its largest member, and only one member can be active at a time.
+
+
+syntax:
+
+struct structure_name{
+    data_type var1;
+    data_type var2;
+    ...
+    data_type varn;
+};
+
+Example:
+
+#include<stdio.h>
+#include<string.h>
+
+// struct book{
+//     char name[100];
+//     float price;
+// }b1, b2;
+
+struct book{
+    char name[100];
+    float price;
+};
+
+void main(){
+    
+    struct book b1, b2;
+    
+    strcpy(b1.name, "CPP");
+    b1.price = 200.50;
+    
+    printf("Mybook name is %s\n", b1.name);
+    printf("My book price is %.2f\n", b1.price);
+    
+    strcpy(b2.name, "C programming");
+    b2.price = 150.80;
+    
+    printf("Mybook name is %s\n", b2.name);
+    printf("My book price is %.2f\n", b2.price);
+    
+    
+}
+
+unisigned 5
+signed -5

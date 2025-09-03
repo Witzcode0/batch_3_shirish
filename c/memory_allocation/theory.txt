@@ -106,3 +106,8 @@ int main() {
 
     return 0;
 }
+
+malloc(5*4)
+malloc(20)
+
+calloc(5, 4)

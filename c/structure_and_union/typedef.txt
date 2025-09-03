@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<string.h>
+
+
+
+struct book{
+    char name[100];
+    float price;
+};
+
+typedef struct book history_book; // history_book is now an alias for struct book
+void main(){
+    
+    history_book b1, b2;
+    
+    strcpy(b1.name, "CPP");
+    b1.price = 200.50;
+    
+    printf("Mybook name is %s\n", b1.name);
+    printf("My book price is %.2f\n", b1.price);
+    
+    strcpy(b2.name, "C programming");
+    b2.price = 150.80;
+    
+    printf("Mybook name is %s\n", b2.name);
+    printf("My book price is %.2f\n", b2.price);
+    
+    
+}
